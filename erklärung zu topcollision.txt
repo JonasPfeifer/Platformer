@@ -1,0 +1,9 @@
+panel1.Left + panel1.Width > block.Left && panel1.Left + panel1.Width  < block.Left+ block.Width + panel1.Width && panel1.Top + panel1.Height >= block.Top && panel1.Top < block.Top
+
+wenn Entfernung von panel1 zum Rand plus die eigene Breite des Objektes größer als die Entfernung von Block zum linken Rand ist 
+
+(linke Kante) und wenn die Entfernung vom Rand von panel1, addiert mit der eigenen größe, kleiner als die Entfernung von Block plus
+ 
+dessen eigene Größe ist (rechte Kante) und wenn die höhe und die Entfernung zum oberen Rand größer oder gleich der Entfernung von 
+
+Block zum oberen Rand ist und die Entfernung von panel1 zum oberen Rand größer ist als die Entfernung von Block zum oberen Rand, dann... 
