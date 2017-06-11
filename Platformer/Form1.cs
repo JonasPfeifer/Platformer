@@ -16,9 +16,10 @@ namespace Platformer
         Level level;
         Player player;
         int gforce = 2;
-        int ax = 2;
+        int ax = 0;
         int ay = 2;
-
+        int offsetx;
+    
         int punkte;
         public Form1()
 
@@ -31,7 +32,8 @@ namespace Platformer
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Player posPlayer = new Player(player.Location.X + ax, player.Location.Y + ay, player.Height, player.Width);
+         
+            Player posPlayer = new Player(player.getx() + ax, player.gety() + ay, player.geth(), player.getw());
             int tmpax = ax;
             int tmpay = ay;
             if (playerIsEndOfLevel(posPlayer))
@@ -58,10 +60,8 @@ namespace Platformer
                         if (listobject.gettypeOfPhysicalObject().Equals("Coin"))
                         {
                             punkte++;
-                            listobject.Visible = false;
                             this.score.Text = "Punkte: " + punkte;
                             physicalObjectList.Remove(listobject);
-                            this.screen.Controls.Remove(listobject);
                             break;
                         }else if (listobject.gettypeOfPhysicalObject().Equals("Goal"))
                         {
@@ -71,24 +71,28 @@ namespace Platformer
                     }
                 }
             }
-            player.Location = new Point(player.Location.X + tmpax, player.Location.Y + tmpay);
+            //player.Location = new Point(player.Location.X + tmpax, player.Location.Y + tmpay);
+            //player.setx(  ( player.getx() + tmpax ) );
+            //player.sety( ( player.gety() + tmpay ) );
+            player.setx((player.getx() + 2));
+            player.sety((player.gety() + 2));
+
             if (ay < gforce)
             {
                 ay++;
             }
-            foreach (PhysicalObject listobject in physicalObjectList)
-            {
-                listobject.Location = new Point(listobject.Location.X - ( tmpax * 2 ), listobject.Location.Y);
-            }
+            offsetx += tmpax;
+            moveLevel();
+            
         }
         private bool playerIsEndOfLevel(Player player)
         {
-            return (player.Location.X <= 0 || player.Location.Y <= 0);
+            return (player.getx() <= 0 || player.gety() <= 0);
             
         }
         private bool playerIsOutOfLevel(Player player)
         {
-            return (player.Bottom > screen.Bottom);
+            return (player.gety()-(player.geth()/2) > screen.Bottom);
 
         }
         private bool isPlayerBetweenObjectX(PhysicalObject listobject, Player player)
@@ -101,29 +105,48 @@ namespace Platformer
         }
         private bool bottomTopColliding(PhysicalObject listobject, PhysicalObject player)
         {
-            return player.Bottom > listobject.Top;
+            return player.getbottom() > listobject.gettop();
         }
         private bool leftColliding(PhysicalObject listobject, PhysicalObject player)
         {
-            return (player.Left + (player.Width / 2)) > listobject.Left;
+            return (player.getleft() + (player.getw() / 2)) > listobject.getleft();
         }
         private bool rightColliding(PhysicalObject listobject, PhysicalObject player)
         {
-            return (player.Right - (player.Width / 2)) < listobject.Right;
+            return (player.getright() - (player.getw() / 2)) < listobject.getright();
         }
+        
+       void moveLevel()
+        {
+            
+            using (Graphics g = Graphics.FromImage(stage))
+            {
+                g.DrawImage(global::Platformer.Properties.Resources.background_export_72dpi, 0, 0);
+                foreach (PhysicalObject obstacle in this.physicalObjectList)
+                {
+                    if (obstacle.getx() < player.getx() + screen.Width  && obstacle.getx() > player.getx() - screen.Width )
+                    {
+                        obstacle.draw(g, offsetx);
+                    }
 
+                }
+                level.getGround().draw(g);
+                level.getplayer().draw(g);
+                this.screen.CreateGraphics().DrawImage(stage, 0, 0);
+            }
+        }
+       
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
 
-            if (e.KeyCode == Keys.A)    //Wenn die Taste D gedrückt wird, wird das Objekt Panel1 auf der WinForm verschoben
+            if (e.KeyCode == Keys.A) 
             {
                 ax = -2;
-                player.BackgroundImage = Platformer.Properties.Resources.rabe_links;
             }
-            if (e.KeyCode == Keys.D)    //gleiche bei A, nur nach links
+            if (e.KeyCode == Keys.D) 
             {
                 ax = 2;
-                player.BackgroundImage = Platformer.Properties.Resources.rabe_rechts;
+                
             }
             if (e.KeyCode == Keys.Space)
             {

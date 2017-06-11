@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Platformer
@@ -32,28 +33,19 @@ namespace Platformer
         /// </summary>
         private void InitializeComponent()
         {
-            
+
             this.components = new System.ComponentModel.Container();
             this.screen = new System.Windows.Forms.Panel();
             this.score = new System.Windows.Forms.Label();
-            this.block = new System.Windows.Forms.PictureBox();
-            //this.panel1 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);            
             this.screen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.block)).BeginInit();
+
             this.SuspendLayout();
             // 
             // screen
             // 
-            foreach(PhysicalObject physicalobject in physicalObjectList)
-            {
-                this.screen.Controls.Add(physicalobject);
-            }
-            this.screen.Controls.Add(player);
-            this.screen.BackColor = System.Drawing.Color.White;
             this.screen.Controls.Add(this.score);
-            this.screen.Controls.Add(this.block);
-            //this.screen.Controls.Add(this.panel1);
+
             this.screen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.screen.Location = new System.Drawing.Point(0, 0);
             this.screen.Name = "screen";
@@ -69,38 +61,16 @@ namespace Platformer
             this.score.TabIndex = 3;
             this.score.Text = "Punkte: 0";
             // 
-            // block
-            //
-            /* 
-            this.block.BackgroundImage = global::Platformer.Properties.Resources.Erdblock;
-            this.block.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.block.Location = new System.Drawing.Point(271, 330);
-            this.block.Name = "block";
-            this.block.Size = new System.Drawing.Size(236, 46);
-            this.block.TabIndex = 1;
-            this.block.TabStop = false;
-            this.block.Click += new System.EventHandler(this.block_Click);
-            */
-            // 
-            // panel1
-            // 
-            /*this.panel1.BackgroundImage = global::Platformer.Properties.Resources.rabe_laufen_l1;
-            this.panel1.Location = new System.Drawing.Point(98, 381);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(25, 25);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);*/
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 1;
+            this.timer1.Interval = 3;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            
-            
             // 
             // Form1
             // 
+            SetStyle(ControlStyles.UserPaint, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
@@ -109,22 +79,19 @@ namespace Platformer
             this.Name = "Form1";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-           
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.block)).EndInit();
             this.ResumeLayout(false);
-
+            this.DoubleBuffered = true;
         }
-
-     
+        
         #endregion
 
         private System.Windows.Forms.Panel screen;
-        //private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.PictureBox block;
         private System.Windows.Forms.Label score;
+        Bitmap stage = new Bitmap(784, 412);
+
     }
 }
 

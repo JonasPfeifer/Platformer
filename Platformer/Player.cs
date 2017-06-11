@@ -12,14 +12,21 @@ namespace Platformer
         public Player(int x, int y, int h, int w, Bitmap background) : base (x,y,h,w,background)
         {
             typeOfPhysicalObject = "Player";
+            
         }
         public Player(int x, int y, int h, int w, Color backgroundcolor) : base(x, y, h, w, backgroundcolor)
         {
             typeOfPhysicalObject = "Player";
+            
         }
         public Player(int x, int y, int h, int w) : base(x, y, h, w)
         {
             typeOfPhysicalObject = "Player";
         }
+        public void draw(Graphics g)
+        {
+            g.DrawImage(background, x, y);
+        }
+       
     }
 }

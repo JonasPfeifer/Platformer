@@ -130,4 +130,67 @@
   <data name="rabe_laufen_l1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rabe_laufen_l1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="groundwtraps" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\groundwtraps.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="move" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\move.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ag_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ag 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ag_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ag 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ag_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ag 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ag_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ag 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background_export_72dpi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background_export_72dpi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ground1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ground_ground_only" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ground_ground_only.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ground_jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ground_jpg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pfg_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pfg 0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pfg_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pfg 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pfg_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pfg 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pfg_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pfg 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="r_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\r 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="r_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\r 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\s 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="s_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\s 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="s_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\s 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
