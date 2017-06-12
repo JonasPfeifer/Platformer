@@ -9,13 +9,10 @@ namespace Platformer
 {
     class Goal : PhysicalObject
     {
-        public Goal(int x, int y, int h, int w, Bitmap background) : base (x,y,h,w,background)
+        public Goal(int x, int y, Bitmap background) : base (x,y,background)
         {
             typeOfPhysicalObject = "Goal";
         }
-        public Goal(int x, int y, int h, int w, Color backgroundcolor) : base(x, y, h, w, backgroundcolor)
-        {
-            typeOfPhysicalObject = "Goal";
-        }
+        
     }
 }

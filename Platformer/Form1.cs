@@ -12,30 +12,34 @@ namespace Platformer
 {
     public partial class Form1 : Form
     {
-        List<PhysicalObject> physicalObjectList;
+        //List<PhysicalObject> physicalObjectList;
         Level level;
         Player player;
         int gforce = 2;
         int ax = 0;
         int ay = 2;
         int offsetx;
-    
+        int playermovementtox;
         int punkte;
+        
         public Form1()
 
         {
             level = new Level();
-            physicalObjectList = level.getphysicalObjectList();
+            //physicalObjectList = level.getphysicalObjectList();
             player = level.getplayer();
             InitializeComponent();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-         
-            Player posPlayer = new Player(player.getx() + ax, player.gety() + ay, player.geth(), player.getw());
+
+            Player posPlayer = new Player(player.getx() + ax, player.gety() + ay,player.getBackground());
+            //Player posPlayer = player;
             int tmpax = ax;
             int tmpay = ay;
+            int tmpposx = player.getx();
+
             if (playerIsEndOfLevel(posPlayer))
             {
                 tmpax = 0;
@@ -47,41 +51,46 @@ namespace Platformer
             }
             else
             {
-                foreach (PhysicalObject listobject in physicalObjectList)
+                foreach (PhysicalObject listobject in level.getphysicalObjectList())
                 {
+                    
 
-                    if ((isPlayerBetweenObjectY(listobject, posPlayer) && isPlayerBetweenObjectX(listobject, posPlayer)))
-                    {
-                        tmpay = 0;
-                        if (!isPlayerBetweenObjectX(listobject, player))
+                    //if ((isPlayerBetweenObjectY(listobject, posPlayer) && isPlayerBetweenObjectX(listobject, posPlayer)))
+                    if (isPlayerBetweenObjectY(listobject, posPlayer)) {
+                        if (isPlayerBetweenObjectX(listobject, posPlayer))
                         {
-                            tmpax = 0;
-                        }
-                        if (listobject.gettypeOfPhysicalObject().Equals("Coin"))
-                        {
-                            punkte++;
-                            this.score.Text = "Punkte: " + punkte;
-                            physicalObjectList.Remove(listobject);
-                            break;
-                        }else if (listobject.gettypeOfPhysicalObject().Equals("Goal"))
-                        {
-                            System.Windows.Forms.Application.Exit();
-                            break;
+                            tmpay = 0;
+                            if (!isPlayerBetweenObjectX(listobject, player))
+                            {
+                                tmpax = 0;
+                            }
+                            if (listobject.gettypeOfPhysicalObject().Equals("Coin"))
+                            {
+                                punkte++;
+                                this.score.Text = "Punkte: " + punkte;
+                                level.getphysicalObjectList().Remove(listobject);
+                                break;
+                            } else if (listobject.gettypeOfPhysicalObject().Equals("Goal"))
+                            {
+                                System.Windows.Forms.Application.Exit();
+                                break;
+                            }
                         }
                     }
                 }
-            }
+               }
             //player.Location = new Point(player.Location.X + tmpax, player.Location.Y + tmpay);
-            //player.setx(  ( player.getx() + tmpax ) );
-            //player.sety( ( player.gety() + tmpay ) );
-            player.setx((player.getx() + 2));
-            player.sety((player.gety() + 2));
+            player.setx( ( player.getx() + tmpax ) );
+            player.sety( ( player.gety() + tmpay ) );
+            //player.setx((player.getx()));
+            //player.sety((player.gety()));
 
             if (ay < gforce)
             {
                 ay++;
             }
-            offsetx += tmpax;
+            playermovementtox = tmpposx - player.getx();
+            //playermovementtox += (tmpposx - (player.getx() + tmpax));
             moveLevel();
             
         }
@@ -109,11 +118,13 @@ namespace Platformer
         }
         private bool leftColliding(PhysicalObject listobject, PhysicalObject player)
         {
-            return (player.getleft() + (player.getw() / 2)) > listobject.getleft();
+            // return (player.getleft() + (player.getw() / 2)) > listobject.getleft();
+            return (player.getright() > listobject.getleft());
         }
         private bool rightColliding(PhysicalObject listobject, PhysicalObject player)
         {
-            return (player.getright() - (player.getw() / 2)) < listobject.getright();
+            //return (player.getright() - (player.getw() / 2)) > listobject.getright();
+            return player.getleft() < listobject.getright();
         }
         
        void moveLevel()
@@ -122,13 +133,15 @@ namespace Platformer
             using (Graphics g = Graphics.FromImage(stage))
             {
                 g.DrawImage(global::Platformer.Properties.Resources.background_export_72dpi, 0, 0);
-                foreach (PhysicalObject obstacle in this.physicalObjectList)
+                foreach (PhysicalObject obstacle in level.getphysicalObjectList())
                 {
-                    if (obstacle.getx() < player.getx() + screen.Width  && obstacle.getx() > player.getx() - screen.Width )
+                    if (!obstacle.gettypeOfPhysicalObject().Equals("Ground"))
                     {
-                        obstacle.draw(g, offsetx);
+                        if (obstacle.getx() < player.getx() + screen.Width && obstacle.getx() > player.getx() - screen.Width)
+                        {
+                            obstacle.draw(g, playermovementtox);
+                        }
                     }
-
                 }
                 level.getGround().draw(g);
                 level.getplayer().draw(g);
@@ -141,16 +154,16 @@ namespace Platformer
 
             if (e.KeyCode == Keys.A) 
             {
-                ax = -2;
+                ax = -1;
             }
             if (e.KeyCode == Keys.D) 
             {
-                ax = 2;
-                
+                ax = 1;   
             }
             if (e.KeyCode == Keys.Space)
             {
                 ay = -10;
+                //ay = - 2;
             }
 
         }

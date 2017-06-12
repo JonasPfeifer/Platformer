@@ -9,13 +9,10 @@ namespace Platformer
 {
     class Coin : PhysicalObject
     {
-        public Coin(int x, int y, int h, int w, Bitmap background) : base (x,y,h,w,background)
+        public Coin(int x, int y, Bitmap background) : base (x,y,background)
         {
             typeOfPhysicalObject = "Coin";
         }
-        public Coin(int x, int y, int h, int w, Color backgroundcolor) : base(x, y, h, w, backgroundcolor)
-        {
-            typeOfPhysicalObject = "Coin";
-        }
+        
     }
 }

@@ -9,15 +9,11 @@ namespace Platformer
 {
     class Ground : PhysicalObject
     {
-        public Ground(int x, int y, int h, int w, Bitmap background) : base(x, y, h, w, background)
+        public Ground(int x, int y, Bitmap background) : base(x, y, background)
         {
             typeOfPhysicalObject = "Ground";
         }
-        public Ground(int x, int y, int h, int w, Color backgroundcolor) : base(x, y, h, w, backgroundcolor)
-        {
-            typeOfPhysicalObject = "Ground";
-        }
-        public void draw(Graphics g)
+               public void draw(Graphics g)
         {
             g.DrawImage(background, x , y);
 

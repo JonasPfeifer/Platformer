@@ -11,39 +11,33 @@ namespace Platformer
     class PhysicalObject
     {
         public String typeOfPhysicalObject = "PhysicalObject";
-        public int x, y, w, h;
+        public int x, y, w, h , offsetx;
         public Bitmap background;
         public System.Drawing.Color backgroundcolor;
-        public PhysicalObject(int x, int y, int h, int w, Bitmap background)
+        public PhysicalObject(int x, int y, Bitmap background)
         {
             this.x = x;
             this.y = y;
-            this.w = w;
-            this.h = h;
             this.background = background;
-        }
-        public PhysicalObject(int x, int y, int h, int w, Color backgroundcolor)
-        {
-            this.x = x;
-            this.y = y;
-            this.w = w;
-            this.h = h;
-            this.backgroundcolor = backgroundcolor;
-        }
-        public PhysicalObject(int x, int y, int h, int w)
-        {
-            this.x = x;
-            this.y = y;
-            this.w = w;
-            this.h = h;
+            this.w = background.Width;
+            this.h = background.Height;
         }
         public String gettypeOfPhysicalObject()
         {
             return typeOfPhysicalObject;
         }
-        public void draw(Graphics g, int offsetx)
+        public void draw(Graphics g, int playermovementtox)
         {
+            this.offsetx -= playermovementtox;
+            System.Drawing.Pen myPen = new System.Drawing.Pen(System.Drawing.Color.Red);
+            g.DrawRectangle(myPen, new Rectangle(x - offsetx, y, w, h));
+            myPen.Dispose();
             g.DrawImage(background, x - offsetx, y);
+            //g.DrawImage(background, x , y);
+        }
+        public Bitmap getBackground()
+        {
+            return background;
         }
         public void setx(int x)
         {
@@ -51,7 +45,7 @@ namespace Platformer
         }
         public int getx()
         {
-            return x;
+            return x + offsetx;
         }
         public void sety(int y)
         {
@@ -79,19 +73,21 @@ namespace Platformer
         }
         public int getbottom()
         {
-            return y - (h / 2);
+            return y + (h / 2);
         }
         public int gettop()
         {
-            return y + (h / 2);
+            return y - (h / 2);
         }
         public int getleft()
         {
-            return x - (w / 2);
+            return (x - offsetx) - (w / 2);
+            //return x - w;
         }
         public int getright()
         {
-            return y + (w / 2);
+            return (x -  offsetx) + (w / 2);
+            //return x + w;
         }
     }
 }

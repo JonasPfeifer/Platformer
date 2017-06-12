@@ -15,9 +15,26 @@ namespace Platformer
         Player player;
         public Level()
         {
-            player = new Player(98, 140, 25, 25, global::Platformer.Properties.Resources.move);
-            ground = new Ground(0, 300, 115, 3768, global::Platformer.Properties.Resources.ground1);
+            player = new Player(45, 0, global::Platformer.Properties.Resources.move);
+            ground = new Ground(0, 300, global::Platformer.Properties.Resources.ground1);
             physicalObjectList.Add(ground);
+            physicalObjectList.Add(new Obstacles(166, 231,  global::Platformer.Properties.Resources.s_1));
+            //physicalObjectList.Add(new Obstacles(773, 259,  global::Platformer.Properties.Resources.r_1));
+            physicalObjectList.Add(new Obstacles(473, 259, global::Platformer.Properties.Resources.r_1));
+            /*
+            physicalObjectList.Add(new Obstacles(888, 207,  global::Platformer.Properties.Resources.s_2));
+            physicalObjectList.Add(new Obstacles(988, 137,  global::Platformer.Properties.Resources.s_3));
+            physicalObjectList.Add(new Obstacles(1311, 228,global::Platformer.Properties.Resources.ag_1));
+            physicalObjectList.Add(new Obstacles(1401, 164, global::Platformer.Properties.Resources.ag_2));
+            physicalObjectList.Add(new Obstacles(1497, 93,  global::Platformer.Properties.Resources.ag_3));
+            physicalObjectList.Add(new Obstacles(1713, 186, global::Platformer.Properties.Resources.ag_4));
+            physicalObjectList.Add(new Obstacles(2315, 259, global::Platformer.Properties.Resources.r_2));
+            physicalObjectList.Add(new Obstacles(2837, 243, global::Platformer.Properties.Resources.pfg_0));
+            physicalObjectList.Add(new Obstacles(3562, 258, global::Platformer.Properties.Resources.pfg_1));
+            physicalObjectList.Add(new Obstacles(3668, 228, global::Platformer.Properties.Resources.pfg_2));
+            physicalObjectList.Add(new Obstacles(3768, 258, global::Platformer.Properties.Resources.pfg_3));
+            */
+            /* with w and h
             physicalObjectList.Add(new Obstacles(166, 231, 79, 71, global::Platformer.Properties.Resources.s_1));
             physicalObjectList.Add(new Obstacles(773, 259, 66, 127, global::Platformer.Properties.Resources.r_1));
             physicalObjectList.Add(new Obstacles(888, 207, 105, 94, global::Platformer.Properties.Resources.s_2));
@@ -31,6 +48,7 @@ namespace Platformer
             physicalObjectList.Add(new Obstacles(3562, 258, 38, 78, global::Platformer.Properties.Resources.pfg_1));
             physicalObjectList.Add(new Obstacles(3668, 228, 38, 78, global::Platformer.Properties.Resources.pfg_2));
             physicalObjectList.Add(new Obstacles(3768, 258, 38, 78, global::Platformer.Properties.Resources.pfg_3));
+            */
         }
         public List<PhysicalObject> getphysicalObjectList() { return physicalObjectList; }
         public void setphysicalObjectList(List<PhysicalObject> physicalObjectList) { this.physicalObjectList = physicalObjectList; }
