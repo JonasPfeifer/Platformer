@@ -18,12 +18,10 @@ namespace Platformer
             player = new Player(45, 0, global::Platformer.Properties.Resources.move);
             ground = new Ground(0, 304, global::Platformer.Properties.Resources.ground1);
             physicalObjectList.Add(ground);
+
+            //Obstacles
             physicalObjectList.Add(new Obstacles(166, 231,  global::Platformer.Properties.Resources.s_1));
-            //physicalObjectList.Add(new Obstacles(773, 259,  global::Platformer.Properties.Resources.r_1));
-            //physicalObjectList.Add(new Obstacles(473, 259, global::Platformer.Properties.Resources.r_1));
-            physicalObjectList.Add(new Obstacles(473, 231, global::Platformer.Properties.Resources.r_1));
-            
-            
+            physicalObjectList.Add(new Obstacles(473, 251, global::Platformer.Properties.Resources.r_1));
             physicalObjectList.Add(new Obstacles(888, 207,  global::Platformer.Properties.Resources.s_2));
             physicalObjectList.Add(new Obstacles(988, 137,  global::Platformer.Properties.Resources.s_3));
             physicalObjectList.Add(new Obstacles(1311, 228,global::Platformer.Properties.Resources.ag_1));
@@ -35,7 +33,14 @@ namespace Platformer
             physicalObjectList.Add(new Obstacles(3562, 258, global::Platformer.Properties.Resources.pfg_1));
             physicalObjectList.Add(new Obstacles(3668, 228, global::Platformer.Properties.Resources.pfg_2));
             physicalObjectList.Add(new Obstacles(3768, 258, global::Platformer.Properties.Resources.pfg_3));
-            
+
+            //Coin
+            physicalObjectList.Add(new Coin(125, 270, global::Platformer.Properties.Resources._1));
+            physicalObjectList.Add(new Coin(166, 200, global::Platformer.Properties.Resources._1));
+
+
+            //Goal
+            physicalObjectList.Add(new Goal(3868, 200, global::Platformer.Properties.Resources.winning_pill));
             /* with w and h
             physicalObjectList.Add(new Obstacles(166, 231, 79, 71, global::Platformer.Properties.Resources.s_1));
             physicalObjectList.Add(new Obstacles(773, 259, 66, 127, global::Platformer.Properties.Resources.r_1));

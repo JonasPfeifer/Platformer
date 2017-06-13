@@ -63,6 +63,16 @@ namespace Platformer.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1 {
+            get {
+                object obj = ResourceManager.GetObject("_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ag_1 {
             get {
                 object obj = ResourceManager.GetObject("ag_1", resourceCulture);
@@ -306,6 +316,16 @@ namespace Platformer.Properties {
         internal static System.Drawing.Bitmap s_3 {
             get {
                 object obj = ResourceManager.GetObject("s_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap winning_pill {
+            get {
+                object obj = ResourceManager.GetObject("winning_pill", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
