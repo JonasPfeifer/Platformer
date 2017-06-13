@@ -79,3 +79,12 @@ C:\Users\jp\Downloads\Platformer_v0.7\Platformer\obj\Debug\Platformer.Properties
 C:\Users\jp\Downloads\Platformer_v0.7\Platformer\obj\Debug\Platformer.csproj.GenerateResource.Cache
 C:\Users\jp\Downloads\Platformer_v0.7\Platformer\obj\Debug\Platformer.exe
 C:\Users\jp\Downloads\Platformer_v0.7\Platformer\obj\Debug\Platformer.pdb
+C:\Users\pvollet\Source\Repos\Platformer\Platformer\bin\Debug\Platformer.exe.config
+C:\Users\pvollet\Source\Repos\Platformer\Platformer\bin\Debug\Platformer.exe
+C:\Users\pvollet\Source\Repos\Platformer\Platformer\bin\Debug\Platformer.pdb
+C:\Users\pvollet\Source\Repos\Platformer\Platformer\obj\Debug\Platformer.csprojResolveAssemblyReference.cache
+C:\Users\pvollet\Source\Repos\Platformer\Platformer\obj\Debug\Platformer.Form1.resources
+C:\Users\pvollet\Source\Repos\Platformer\Platformer\obj\Debug\Platformer.Properties.Resources.resources
+C:\Users\pvollet\Source\Repos\Platformer\Platformer\obj\Debug\Platformer.csproj.GenerateResource.Cache
+C:\Users\pvollet\Source\Repos\Platformer\Platformer\obj\Debug\Platformer.exe
+C:\Users\pvollet\Source\Repos\Platformer\Platformer\obj\Debug\Platformer.pdb
