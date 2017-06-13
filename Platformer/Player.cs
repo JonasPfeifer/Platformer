@@ -16,6 +16,7 @@ namespace Platformer
         }
         public void draw(Graphics g)
         {
+
             System.Drawing.Pen myPen = new System.Drawing.Pen(System.Drawing.Color.Red);
             g.DrawRectangle(myPen, new Rectangle(x, y, w, h));
             myPen.Dispose();

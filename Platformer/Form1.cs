@@ -59,28 +59,41 @@ namespace Platformer
                     if (isPlayerBetweenObjectY(listobject, posPlayer)) {
                         if (isPlayerBetweenObjectX(listobject, posPlayer))
                         {
-                            tmpay = 0;
-                            if (!isPlayerBetweenObjectX(listobject, player))
+                             tmpay = 0;
+                            //if (!isPlayerBetweenObjectX(listobject, player))
+                            if (!leftColliding(listobject, player) && tmpax<0)
                             {
                                 tmpax = 0;
                             }
+                            if(!rightColliding(listobject, player))
+                            {
+                                tmpax = 0;
+                            }
+                            //if ( ! leftColliding(listobject, player) || !rightColliding(listobject, player))){}
                             if (listobject.gettypeOfPhysicalObject().Equals("Coin"))
                             {
                                 punkte++;
                                 this.score.Text = "Punkte: " + punkte;
                                 level.getphysicalObjectList().Remove(listobject);
-                                break;
+                               break;
                             } else if (listobject.gettypeOfPhysicalObject().Equals("Goal"))
                             {
                                 System.Windows.Forms.Application.Exit();
-                                break;
+                              break;
                             }
                         }
                     }
                 }
-               }
+            }
             //player.Location = new Point(player.Location.X + tmpax, player.Location.Y + tmpay);
-            player.setx( ( player.getx() + tmpax ) );
+            if (!(player.getx() > screen.Width / 2))
+            { 
+                player.setx((player.getx() + tmpax));
+            }else
+            {
+                tmpax *= 2 ;
+            }
+            
             player.sety( ( player.gety() + tmpay ) );
             //player.setx((player.getx()));
             //player.sety((player.gety()));
@@ -89,7 +102,7 @@ namespace Platformer
             {
                 ay++;
             }
-            playermovementtox = tmpposx - player.getx();
+            playermovementtox = tmpposx - (player.getx() + tmpax);
             //playermovementtox += (tmpposx - (player.getx() + tmpax));
             moveLevel();
             
@@ -106,7 +119,7 @@ namespace Platformer
         }
         private bool isPlayerBetweenObjectX(PhysicalObject listobject, Player player)
         {
-            return leftColliding(listobject, player) && rightColliding(listobject, player);
+            return leftColliding(listobject, player) || rightColliding(listobject, player);
         }
         private bool isPlayerBetweenObjectY(PhysicalObject listobject, Player player)
         {
@@ -118,13 +131,11 @@ namespace Platformer
         }
         private bool leftColliding(PhysicalObject listobject, PhysicalObject player)
         {
-            // return (player.getleft() + (player.getw() / 2)) > listobject.getleft();
-            return (player.getright() > listobject.getleft());
+            return player.getright() > listobject.getleft() && player.getright() < listobject.getright();
         }
         private bool rightColliding(PhysicalObject listobject, PhysicalObject player)
         {
-            //return (player.getright() - (player.getw() / 2)) > listobject.getright();
-            return player.getleft() < listobject.getright();
+            return player.getleft() < listobject.getright() && player.getleft() > listobject.getleft();
         }
         
        void moveLevel()
@@ -137,13 +148,13 @@ namespace Platformer
                 {
                     if (!obstacle.gettypeOfPhysicalObject().Equals("Ground"))
                     {
-                        if (obstacle.getx() < player.getx() + screen.Width && obstacle.getx() > player.getx() - screen.Width)
-                        {
+                        //if (obstacle.getx() < player.getx() + screen.Width && obstacle.getx() > player.getx() - screen.Width)
+                        //{
                             obstacle.draw(g, playermovementtox);
-                        }
+                        //}
                     }
                 }
-                level.getGround().draw(g);
+                level.getGround().draw(g, playermovementtox);
                 level.getplayer().draw(g);
                 this.screen.CreateGraphics().DrawImage(stage, 0, 0);
             }

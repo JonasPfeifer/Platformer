@@ -21,19 +21,30 @@ namespace Platformer
             this.background = background;
             this.w = background.Width;
             this.h = background.Height;
+            this.offsetx = x;
         }
         public String gettypeOfPhysicalObject()
         {
             return typeOfPhysicalObject;
         }
-        public void draw(Graphics g, int playermovementtox)
+        public virtual void draw(Graphics g, int playermovementtox)
         {
-            this.offsetx -= playermovementtox;
+            if (playermovementtox != 0)
+            {
+                //this.offsetx += playermovementtox ;
+                x += playermovementtox;
+            }
+            
             System.Drawing.Pen myPen = new System.Drawing.Pen(System.Drawing.Color.Red);
-            g.DrawRectangle(myPen, new Rectangle(x - offsetx, y, w, h));
+            //g.DrawRectangle(myPen, new Rectangle( offsetx, y, w, h));
+            //myPen.Dispose();
+            //g.DrawImage(background,  offsetx, y);
+            g.DrawRectangle(myPen, new Rectangle(x, y, w, h));
             myPen.Dispose();
-            g.DrawImage(background, x - offsetx, y);
+            g.DrawImage(background, x, y);
+
             //g.DrawImage(background, x , y);
+
         }
         public Bitmap getBackground()
         {
@@ -45,7 +56,8 @@ namespace Platformer
         }
         public int getx()
         {
-            return x + offsetx;
+            //return x + offsetx;
+            return x ;
         }
         public void sety(int y)
         {
@@ -73,21 +85,27 @@ namespace Platformer
         }
         public int getbottom()
         {
-            return y + (h / 2);
+            //return y + (h / 2);
+            return y +h ;
         }
         public int gettop()
         {
-            return y - (h / 2);
+            //return y - (h / 2);
+            return y ;
         }
         public int getleft()
         {
-            return (x - offsetx) - (w / 2);
-            //return x - w;
+            //return (x - offsetx) - (w / 2);
+            //return x - (w );
+            return x;
+            //return 95;
         }
         public int getright()
         {
-            return (x -  offsetx) + (w / 2);
-            //return x + w;
+            //return (x -  offsetx) + (w / 2);
+            //return x + (w / 2);
+            return x + w;
+            //return 95;
         }
     }
 }

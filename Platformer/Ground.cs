@@ -9,19 +9,28 @@ namespace Platformer
 {
     class Ground : PhysicalObject
     {
+        Bitmap CroppedImage;
+        int groundcount=1;
         public Ground(int x, int y, Bitmap background) : base(x, y, background)
         {
             typeOfPhysicalObject = "Ground";
         }
-               public void draw(Graphics g)
+        
+        public override void draw(Graphics g,int playermovementtox)
         {
-            g.DrawImage(background, x , y);
-
-            /*
-            System.Drawing.Pen myPen = new System.Drawing.Pen(System.Drawing.Color.Red);
-            g.DrawRectangle(myPen, new Rectangle
-            myPen.Dispose();
-            */
+            if(0 > groundcount - playermovementtox)
+            {
+                groundcount = 1;
+            }
+            else
+            {
+                groundcount -= playermovementtox;
+                
+            }
+           //groundcount -= playermovementtox;
+            CroppedImage = background.Clone(new System.Drawing.Rectangle(groundcount, 0,790, 108), background.PixelFormat);
+            g.DrawImage(CroppedImage, 0 , y,790,108);
+            
         }
     }
 }
