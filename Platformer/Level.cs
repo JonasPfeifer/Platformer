@@ -16,8 +16,9 @@ namespace Platformer
         public Level()
         {
             player = new Player(45, 0, global::Platformer.Properties.Resources.move);
-            ground = new Ground(0, 300, global::Platformer.Properties.Resources.ground1);
+            ground = new Ground(0, 304, global::Platformer.Properties.Resources.trans);
             physicalObjectList.Add(ground);
+            physicalObjectList.Add(new Obstacles(0, 304, global::Platformer.Properties.Resources.ground_x));
             physicalObjectList.Add(new Obstacles(166, 231,  global::Platformer.Properties.Resources.s_1));
             //physicalObjectList.Add(new Obstacles(773, 259,  global::Platformer.Properties.Resources.r_1));
             physicalObjectList.Add(new Obstacles(473, 259, global::Platformer.Properties.Resources.r_1));
