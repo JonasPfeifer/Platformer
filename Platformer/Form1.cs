@@ -15,7 +15,7 @@ namespace Platformer
         //List<PhysicalObject> physicalObjectList;
         Level level;
         Player player;
-        int gforce = 2;
+        int gforce = 15;
         int ax = 0;
         int ay = 2;
         int offsetx;
