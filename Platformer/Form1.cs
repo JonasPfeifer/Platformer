@@ -60,7 +60,8 @@ namespace Platformer
                         if (isPlayerBetweenObjectX(listobject, posPlayer))
                         {
                             tmpay = 0;
-                            if (!isPlayerBetweenObjectX(listobject, player))
+                            //if (!isPlayerBetweenObjectX(listobject, player))
+                            if (!leftColliding(listobject, player) || !rightColliding(listobject, player))
                             {
                                 tmpax = 0;
                             }
@@ -69,11 +70,11 @@ namespace Platformer
                                 punkte++;
                                 this.score.Text = "Punkte: " + punkte;
                                 level.getphysicalObjectList().Remove(listobject);
-                                break;
+                               // break;
                             } else if (listobject.gettypeOfPhysicalObject().Equals("Goal"))
                             {
                                 System.Windows.Forms.Application.Exit();
-                                break;
+                              //  break;
                             }
                         }
                     }
@@ -106,7 +107,7 @@ namespace Platformer
         }
         private bool isPlayerBetweenObjectX(PhysicalObject listobject, Player player)
         {
-            return leftColliding(listobject, player) && rightColliding(listobject, player);
+            return leftColliding(listobject, player) || rightColliding(listobject, player);
         }
         private bool isPlayerBetweenObjectY(PhysicalObject listobject, Player player)
         {
@@ -119,12 +120,13 @@ namespace Platformer
         private bool leftColliding(PhysicalObject listobject, PhysicalObject player)
         {
             // return (player.getleft() + (player.getw() / 2)) > listobject.getleft();
-            return (player.getright() > listobject.getleft());
+            //return (player.getright() > listobject.getleft());
+            return player.getright() > listobject.getleft() && player.getright() < listobject.getright();
         }
         private bool rightColliding(PhysicalObject listobject, PhysicalObject player)
         {
             //return (player.getright() - (player.getw() / 2)) > listobject.getright();
-            return player.getleft() < listobject.getright();
+            return player.getleft() < listobject.getright() && player.getleft() > listobject.getleft();
         }
         
        void moveLevel()
@@ -137,13 +139,13 @@ namespace Platformer
                 {
                     if (!obstacle.gettypeOfPhysicalObject().Equals("Ground"))
                     {
-                        if (obstacle.getx() < player.getx() + screen.Width && obstacle.getx() > player.getx() - screen.Width)
-                        {
+                        //if (obstacle.getx() < player.getx() + screen.Width && obstacle.getx() > player.getx() - screen.Width)
+                        //{
                             obstacle.draw(g, playermovementtox);
-                        }
+                        //}
                     }
                 }
-                level.getGround().draw(g);
+                level.getGround().draw(g, playermovementtox);
                 level.getplayer().draw(g);
                 this.screen.CreateGraphics().DrawImage(stage, 0, 0);
             }

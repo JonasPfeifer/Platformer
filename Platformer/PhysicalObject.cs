@@ -26,7 +26,7 @@ namespace Platformer
         {
             return typeOfPhysicalObject;
         }
-        public void draw(Graphics g, int playermovementtox)
+        public virtual void draw(Graphics g, int playermovementtox)
         {
             this.offsetx -= playermovementtox;
             System.Drawing.Pen myPen = new System.Drawing.Pen(System.Drawing.Color.Red);
@@ -45,7 +45,8 @@ namespace Platformer
         }
         public int getx()
         {
-            return x + offsetx;
+            //return x + offsetx;
+            return x ;
         }
         public void sety(int y)
         {
@@ -82,12 +83,12 @@ namespace Platformer
         public int getleft()
         {
             return (x - offsetx) - (w / 2);
-            //return x - w;
+            //return x - (w / 2);
         }
         public int getright()
         {
             return (x -  offsetx) + (w / 2);
-            //return x + w;
+            //return x + (w / 2);
         }
     }
 }
