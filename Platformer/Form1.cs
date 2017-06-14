@@ -135,7 +135,7 @@ namespace Platformer
         {
             using (Graphics g = Graphics.FromImage(stage))
             {
-                g.DrawImage(moveScrollingTexture(playermovementtox, global::Platformer.Properties.Resources.bg03_final_), 0, 0, screen.Width, screen.Height);
+                g.DrawImage(moveScrollingTexture(playermovementtox, global::Platformer.Properties.Resources.bg03_final__72dpi_lowquali), 0, 0, screen.Width, screen.Height);
                 level.getGround().draw(g, playermovementtox);
                 foreach (PhysicalObject obstacle in level.getphysicalObjectList())
                 {

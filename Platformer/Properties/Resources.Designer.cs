@@ -233,6 +233,16 @@ namespace Platformer.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bg03_final__72dpi_lowquali {
+            get {
+                object obj = ResourceManager.GetObject("bg03_final__72dpi_lowquali", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap crystal {
             get {
                 object obj = ResourceManager.GetObject("crystal", resourceCulture);
