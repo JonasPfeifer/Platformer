@@ -21,7 +21,7 @@ namespace Platformer
 
             //Goal
             //physicalObjectList.Add(new Goal(6776, -54, global::Platformer.Properties.Resources.winning_pill));
-
+            physicalObjectList.Add(new Goal(6794, 89, global::Platformer.Properties.Resources.crystal));
 
             //Obstacles
             physicalObjectList.Add(new Obstacles(166, 231,  global::Platformer.Properties.Resources.s_1));
@@ -37,7 +37,6 @@ namespace Platformer
             physicalObjectList.Add(new Obstacles(3562, 258, global::Platformer.Properties.Resources.pfg_1));
             physicalObjectList.Add(new Obstacles(3668, 228, global::Platformer.Properties.Resources.pfg_2));
             physicalObjectList.Add(new Obstacles(3768, 258, global::Platformer.Properties.Resources.pfg_3));
-            physicalObjectList.Add(new Obstacles(6794, 89, global::Platformer.Properties.Resources.crystal));
             physicalObjectList.Add(new Obstacles(6701,224 , global::Platformer.Properties.Resources.ag_12));
             physicalObjectList.Add(new Obstacles(6021,224 , global::Platformer.Properties.Resources.ag_11));
             physicalObjectList.Add(new Obstacles(5901,160 , global::Platformer.Properties.Resources.ag_10));

@@ -9,26 +9,17 @@ namespace Platformer
 {
     class Ground : PhysicalObject
     {
-        Bitmap CroppedImage;
-        int groundcount=1;
+        ScrollingTexture backgroundScrolling;
         public Ground(int x, int y, Bitmap background) : base(x, y, background)
         {
             typeOfPhysicalObject = "Ground";
+            backgroundScrolling = new ScrollingTexture(background);
         }
         
         public override void draw(Graphics g,int playermovementtox)
         {
-            if(0 > groundcount - playermovementtox || groundcount - playermovementtox > 5000)
-            {
-                groundcount = 1;
-            }
-            else
-            {
-                groundcount -= playermovementtox;
-                
-            }
-           CroppedImage = background.Clone(new System.Drawing.Rectangle(groundcount, 0,790, 108), background.PixelFormat);
-            g.DrawImage(CroppedImage, 0 , y,790,108);
+            
+            g.DrawImage(backgroundScrolling.getImageAtOffsetLocation(playermovementtox), 0 , y,790,108);
             
         }
     }

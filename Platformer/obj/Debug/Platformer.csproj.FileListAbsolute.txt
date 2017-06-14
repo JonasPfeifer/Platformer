@@ -70,15 +70,6 @@ C:/Users/jp/Downloads/Platformer_v0.6/Platformer/obj/Debug/Platformer.Properties
 C:/Users/jp/Downloads/Platformer_v0.6/Platformer/obj/Debug/Platformer.csproj.GenerateResource.Cache
 C:/Users/jp/Downloads/Platformer_v0.6/Platformer/obj/Debug/Platformer.exe
 C:/Users/jp/Downloads/Platformer_v0.6/Platformer/obj/Debug/Platformer.pdb
-C:/Users/jp/Downloads/Platformer_v0.7/Platformer/bin/Debug/Platformer.exe.config
-C:/Users/jp/Downloads/Platformer_v0.7/Platformer/bin/Debug/Platformer.exe
-C:/Users/jp/Downloads/Platformer_v0.7/Platformer/bin/Debug/Platformer.pdb
-C:/Users/jp/Downloads/Platformer_v0.7/Platformer/obj/Debug/Platformer.csprojResolveAssemblyReference.cache
-C:/Users/jp/Downloads/Platformer_v0.7/Platformer/obj/Debug/Platformer.Form1.resources
-C:/Users/jp/Downloads/Platformer_v0.7/Platformer/obj/Debug/Platformer.Properties.Resources.resources
-C:/Users/jp/Downloads/Platformer_v0.7/Platformer/obj/Debug/Platformer.csproj.GenerateResource.Cache
-C:/Users/jp/Downloads/Platformer_v0.7/Platformer/obj/Debug/Platformer.exe
-C:/Users/jp/Downloads/Platformer_v0.7/Platformer/obj/Debug/Platformer.pdb
 /Users/jpfeifer/Documents/Platformer/Platformer/bin/Debug/Platformer.exe.config
 /Users/jpfeifer/Documents/Platformer/Platformer/bin/Debug/Platformer.exe
 /Users/jpfeifer/Documents/Platformer/Platformer/bin/Debug/Platformer.pdb
@@ -117,3 +108,12 @@ C:/Users/Schueler/Desktop/Platformer/Platformer/obj/Debug/Platformer.csproj.Gene
 /Users/jpfeifer/Documents/Neuer Ordner/Platformer/Platformer/obj/Debug/Platformer.csproj.CoreCompileInputs.cache
 /Users/jpfeifer/Documents/Neuer Ordner/Platformer/Platformer/obj/Debug/Platformer.exe
 /Users/jpfeifer/Documents/Neuer Ordner/Platformer/Platformer/obj/Debug/Platformer.pdb
+C:\Users\jp\Downloads\Platformer_v0.7\Platformer\bin\Debug\Platformer.exe.config
+C:\Users\jp\Downloads\Platformer_v0.7\Platformer\bin\Debug\Platformer.exe
+C:\Users\jp\Downloads\Platformer_v0.7\Platformer\bin\Debug\Platformer.pdb
+C:\Users\jp\Downloads\Platformer_v0.7\Platformer\obj\Debug\Platformer.csprojResolveAssemblyReference.cache
+C:\Users\jp\Downloads\Platformer_v0.7\Platformer\obj\Debug\Platformer.Form1.resources
+C:\Users\jp\Downloads\Platformer_v0.7\Platformer\obj\Debug\Platformer.Properties.Resources.resources
+C:\Users\jp\Downloads\Platformer_v0.7\Platformer\obj\Debug\Platformer.csproj.GenerateResource.Cache
+C:\Users\jp\Downloads\Platformer_v0.7\Platformer\obj\Debug\Platformer.exe
+C:\Users\jp\Downloads\Platformer_v0.7\Platformer\obj\Debug\Platformer.pdb

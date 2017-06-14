@@ -19,10 +19,13 @@ namespace Platformer
         int ay = 2;
         int playermovementtox;
         int punkte;
-        
+        ScrollingTexture background;
+
+
         public Form1()
 
         {
+            background = new ScrollingTexture(global::Platformer.Properties.Resources.background_export_72dpi);
             level = new Level();
             player = level.getplayer();
             InitializeComponent();
@@ -129,7 +132,7 @@ namespace Platformer
             
             using (Graphics g = Graphics.FromImage(stage))
             {
-                g.DrawImage(global::Platformer.Properties.Resources.background_export_72dpi, 0, 0, 7000, 412);
+                g.DrawImage(background.getImageAtOffsetLocation(playermovementtox), 0, 0, 784, 304);
                 foreach (PhysicalObject obstacle in level.getphysicalObjectList())
                 {
                     if (!obstacle.gettypeOfPhysicalObject().Equals("Ground"))
