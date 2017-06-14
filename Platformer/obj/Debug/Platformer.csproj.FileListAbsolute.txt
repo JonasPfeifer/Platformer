@@ -117,3 +117,12 @@ C:/Users/Schueler/Desktop/Platformer/Platformer/obj/Debug/Platformer.csproj.Gene
 /Users/jpfeifer/Documents/Neuer Ordner/Platformer/Platformer/obj/Debug/Platformer.csproj.CoreCompileInputs.cache
 /Users/jpfeifer/Documents/Neuer Ordner/Platformer/Platformer/obj/Debug/Platformer.exe
 /Users/jpfeifer/Documents/Neuer Ordner/Platformer/Platformer/obj/Debug/Platformer.pdb
+C:\Users\jacks\Platformer\Platformer\bin\Debug\Platformer.exe.config
+C:\Users\jacks\Platformer\Platformer\bin\Debug\Platformer.exe
+C:\Users\jacks\Platformer\Platformer\bin\Debug\Platformer.pdb
+C:\Users\jacks\Platformer\Platformer\obj\Debug\Platformer.csprojResolveAssemblyReference.cache
+C:\Users\jacks\Platformer\Platformer\obj\Debug\Platformer.Form1.resources
+C:\Users\jacks\Platformer\Platformer\obj\Debug\Platformer.Properties.Resources.resources
+C:\Users\jacks\Platformer\Platformer\obj\Debug\Platformer.csproj.GenerateResource.Cache
+C:\Users\jacks\Platformer\Platformer\obj\Debug\Platformer.exe
+C:\Users\jacks\Platformer\Platformer\obj\Debug\Platformer.pdb

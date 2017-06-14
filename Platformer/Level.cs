@@ -36,7 +36,7 @@ namespace Platformer
             physicalObjectList.Add(new Obstacles(1497, 93,  global::Platformer.Properties.Resources.ag_3));
             physicalObjectList.Add(new Obstacles(1713, 186, global::Platformer.Properties.Resources.ag_4));
             physicalObjectList.Add(new Obstacles(2315, 259, global::Platformer.Properties.Resources.r_2));
-            physicalObjectList.Add(new Obstacles(2837, 243, global::Platformer.Properties.Resources.pfg_0));
+            physicalObjectList.Add(new Obstacles(2837, 230, global::Platformer.Properties.Resources.pfg_0));
             physicalObjectList.Add(new Obstacles(3562, 258, global::Platformer.Properties.Resources.pfg_1));
             physicalObjectList.Add(new Obstacles(3668, 228, global::Platformer.Properties.Resources.pfg_2));
             physicalObjectList.Add(new Obstacles(3768, 258, global::Platformer.Properties.Resources.pfg_3));
@@ -70,10 +70,10 @@ namespace Platformer
             physicalObjectList.Add(new Coin(3257,261 , global::Platformer.Properties.Resources._1));
             physicalObjectList.Add(new Coin(3227,261 , global::Platformer.Properties.Resources._1));
             physicalObjectList.Add(new Coin(3197,261 , global::Platformer.Properties.Resources._1));
-            physicalObjectList.Add(new Coin(2943,204 , global::Platformer.Properties.Resources._1));
-            physicalObjectList.Add(new Coin(2913,204 , global::Platformer.Properties.Resources._1));
-            physicalObjectList.Add(new Coin(2883,204 , global::Platformer.Properties.Resources._1));
-            physicalObjectList.Add(new Coin(2853,204 , global::Platformer.Properties.Resources._1));
+            physicalObjectList.Add(new Coin(2943,195 , global::Platformer.Properties.Resources._1));
+            physicalObjectList.Add(new Coin(2913,195 , global::Platformer.Properties.Resources._1));
+            physicalObjectList.Add(new Coin(2883,195 , global::Platformer.Properties.Resources._1));
+            physicalObjectList.Add(new Coin(2853,195 , global::Platformer.Properties.Resources._1));
             physicalObjectList.Add(new Coin(2597,261 , global::Platformer.Properties.Resources._1));
             physicalObjectList.Add(new Coin(2567,261 , global::Platformer.Properties.Resources._1));
             physicalObjectList.Add(new Coin(2537,261 , global::Platformer.Properties.Resources._1));
