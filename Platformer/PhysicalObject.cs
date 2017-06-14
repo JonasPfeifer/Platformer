@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Platformer
 {
+
     class PhysicalObject
     {
         public String typeOfPhysicalObject = "PhysicalObject";

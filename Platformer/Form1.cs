@@ -10,17 +10,21 @@ using System.Windows.Forms;
 
 namespace Platformer
 {
-    //Klasse mit sämtlichen Kollisionsabfrage, Logik des Spiel
+    //Klasse mit sämtlicher Kollisionsabfrage und Logik des Spiel
     public partial class Form1 : Form
     {
         Level level;
         Player player;
         //gforce ist der Wert mit dem der Spieler zum Boden gezogen wird.
         int gforce = 2;
+        //beschleunigung des spielers in richtung x
         int ax = 0;
+        //beschleunigung des spielers in richtung y
         int ay = 2;
+        //differenz der positions des spielers zwischen zwei zeit vorgängen
         int playermovementtox;
         int punkte;
+        // zähler für verschiebung des hintergrunds 
         int backroundcount;
         
         public Form1()
@@ -29,7 +33,8 @@ namespace Platformer
             player = level.getplayer();
             InitializeComponent();
         }
-
+        //Wird jede Zeit einheit die mit timer1.Interval fest gelegt wird abrufen.
+        //Kümmert sich um die Kollisionsabfrage und das bewegen des Level mit Spieler.
         private void timer1_Tick(object sender, EventArgs e)
         {
 
