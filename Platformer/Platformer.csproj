@@ -140,46 +140,7 @@
     <None Include="Resources\ground_ground_only.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ag 1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ag 2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ag 3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ag 4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pfg 0.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pfg 1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pfg 2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pfg 3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\r 1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\r 2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\s 1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\s 2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\ground.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\s 3.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\groundwosky.jpg" />
@@ -194,7 +155,82 @@
     <None Include="Resources\1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ag 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ag 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ag 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ag 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ag 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ag 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ag 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ag 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ag 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ag 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ag 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ag 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crystal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pfg 0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pfg 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pfg 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pfg 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pitfall 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pitfall 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s 3.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\winning pill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animated_2.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

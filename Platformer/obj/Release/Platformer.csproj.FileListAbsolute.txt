@@ -1,0 +1,9 @@
+C:\Users\Schueler\Documents\Platformer\Platformer\bin\Release\Platformer.exe.config
+C:\Users\Schueler\Documents\Platformer\Platformer\bin\Release\Platformer.exe
+C:\Users\Schueler\Documents\Platformer\Platformer\bin\Release\Platformer.pdb
+C:\Users\Schueler\Documents\Platformer\Platformer\obj\Release\Platformer.csprojResolveAssemblyReference.cache
+C:\Users\Schueler\Documents\Platformer\Platformer\obj\Release\Platformer.Form1.resources
+C:\Users\Schueler\Documents\Platformer\Platformer\obj\Release\Platformer.Properties.Resources.resources
+C:\Users\Schueler\Documents\Platformer\Platformer\obj\Release\Platformer.csproj.GenerateResource.Cache
+C:\Users\Schueler\Documents\Platformer\Platformer\obj\Release\Platformer.exe
+C:\Users\Schueler\Documents\Platformer\Platformer\obj\Release\Platformer.pdb

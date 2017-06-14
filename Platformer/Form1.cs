@@ -12,13 +12,11 @@ namespace Platformer
 {
     public partial class Form1 : Form
     {
-        //List<PhysicalObject> physicalObjectList;
         Level level;
         Player player;
         int gforce = 2;
         int ax = 0;
         int ay = 2;
-        int offsetx;
         int playermovementtox;
         int punkte;
         
@@ -26,7 +24,6 @@ namespace Platformer
 
         {
             level = new Level();
-            //physicalObjectList = level.getphysicalObjectList();
             player = level.getplayer();
             InitializeComponent();
         }
@@ -34,8 +31,7 @@ namespace Platformer
         private void timer1_Tick(object sender, EventArgs e)
         {
 
-            Player posPlayer = new Player(player.getx() + ax, player.gety() + ay,player.getBackground());
-            //Player posPlayer = player;
+            Player posPlayer = new Player(player.getx() + ax, player.gety() + ay,player.geth(), player.getw(),player.getBackground());
             int tmpax = ax;
             int tmpay = ay;
             int tmpposx = player.getx();
@@ -53,23 +49,18 @@ namespace Platformer
             {
                 foreach (PhysicalObject listobject in level.getphysicalObjectList())
                 {
-                    
-
-                    //if ((isPlayerBetweenObjectY(listobject, posPlayer) && isPlayerBetweenObjectX(listobject, posPlayer)))
                     if (isPlayerBetweenObjectY(listobject, posPlayer)) {
                         if (isPlayerBetweenObjectX(listobject, posPlayer))
                         {
                              tmpay = 0;
-                            //if (!isPlayerBetweenObjectX(listobject, player))
                             if (!leftColliding(listobject, player) && tmpax<0)
                             {
                                 tmpax = 0;
                             }
-                            if(!rightColliding(listobject, player))
+                            if (!rightColliding(listobject, player))
                             {
                                 tmpax = 0;
                             }
-                            //if ( ! leftColliding(listobject, player) || !rightColliding(listobject, player))){}
                             if (listobject.gettypeOfPhysicalObject().Equals("Coin"))
                             {
                                 punkte++;
@@ -85,7 +76,6 @@ namespace Platformer
                     }
                 }
             }
-            //player.Location = new Point(player.Location.X + tmpax, player.Location.Y + tmpay);
             if (!(player.getx() > screen.Width / 2))
             { 
                 player.setx((player.getx() + tmpax));
@@ -95,15 +85,11 @@ namespace Platformer
             }
             
             player.sety( ( player.gety() + tmpay ) );
-            //player.setx((player.getx()));
-            //player.sety((player.gety()));
-
             if (ay < gforce)
             {
                 ay++;
             }
             playermovementtox = tmpposx - (player.getx() + tmpax);
-            //playermovementtox += (tmpposx - (player.getx() + tmpax));
             moveLevel();
             
         }
@@ -148,14 +134,11 @@ namespace Platformer
                 {
                     if (!obstacle.gettypeOfPhysicalObject().Equals("Ground"))
                     {
-                        //if (obstacle.getx() < player.getx() + screen.Width && obstacle.getx() > player.getx() - screen.Width)
-                        //{
                             obstacle.draw(g, playermovementtox);
-                        //}
                     }
                 }
                 level.getGround().draw(g, playermovementtox);
-                level.getplayer().draw(g);
+                player.draw(g);
                 this.screen.CreateGraphics().DrawImage(stage, 0, 0);
             }
         }
@@ -174,7 +157,6 @@ namespace Platformer
             if (e.KeyCode == Keys.Space)
             {
                 ay = -10;
-                //ay = - 2;
             }
 
         }

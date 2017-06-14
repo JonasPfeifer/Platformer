@@ -33,11 +33,12 @@ namespace Platformer
         /// </summary>
         private void InitializeComponent()
         {
-
             this.components = new System.ComponentModel.Container();
             this.screen = new System.Windows.Forms.Panel();
             this.score = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);            
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            
+
             this.screen.SuspendLayout();
 
             this.SuspendLayout();
@@ -45,7 +46,6 @@ namespace Platformer
             // screen
             // 
             this.screen.Controls.Add(this.score);
-
             this.screen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.screen.Location = new System.Drawing.Point(0, 0);
             this.screen.Name = "screen";
@@ -60,6 +60,7 @@ namespace Platformer
             this.score.Size = new System.Drawing.Size(53, 13);
             this.score.TabIndex = 3;
             this.score.Text = "Punkte: 0";
+
             // 
             // timer1
             // 

@@ -23,7 +23,17 @@ namespace Platformer
             this.h = background.Height;
             this.offsetx = x;
         }
-        public String gettypeOfPhysicalObject()
+		public PhysicalObject(int x, int y,int w,int h , Bitmap background)
+		{
+			this.x = x;
+			this.y = y;
+			this.background = background;
+			this.w = w;
+			this.h = h;
+			this.offsetx = x;
+		}
+
+		public String gettypeOfPhysicalObject()
         {
             return typeOfPhysicalObject;
         }
@@ -31,20 +41,13 @@ namespace Platformer
         {
             if (playermovementtox != 0)
             {
-                //this.offsetx += playermovementtox ;
                 x += playermovementtox;
             }
             
             System.Drawing.Pen myPen = new System.Drawing.Pen(System.Drawing.Color.Red);
-            //g.DrawRectangle(myPen, new Rectangle( offsetx, y, w, h));
-            //myPen.Dispose();
-            //g.DrawImage(background,  offsetx, y);
             g.DrawRectangle(myPen, new Rectangle(x, y, w, h));
             myPen.Dispose();
             g.DrawImage(background, x, y);
-
-            //g.DrawImage(background, x , y);
-
         }
         public Bitmap getBackground()
         {
@@ -56,7 +59,6 @@ namespace Platformer
         }
         public int getx()
         {
-            //return x + offsetx;
             return x ;
         }
         public void sety(int y)
@@ -85,27 +87,19 @@ namespace Platformer
         }
         public int getbottom()
         {
-            //return y + (h / 2);
             return y +h ;
         }
         public int gettop()
         {
-            //return y - (h / 2);
             return y ;
         }
         public int getleft()
         {
-            //return (x - offsetx) - (w / 2);
-            //return x - (w );
             return x;
-            //return 95;
         }
         public int getright()
         {
-            //return (x -  offsetx) + (w / 2);
-            //return x + (w / 2);
             return x + w;
-            //return 95;
         }
     }
 }

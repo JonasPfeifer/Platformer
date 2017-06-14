@@ -83,6 +83,36 @@ namespace Platformer.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ag_10 {
+            get {
+                object obj = ResourceManager.GetObject("ag_10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ag_11 {
+            get {
+                object obj = ResourceManager.GetObject("ag_11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ag_12 {
+            get {
+                object obj = ResourceManager.GetObject("ag_12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ag_2 {
             get {
                 object obj = ResourceManager.GetObject("ag_2", resourceCulture);
@@ -113,6 +143,66 @@ namespace Platformer.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ag_5 {
+            get {
+                object obj = ResourceManager.GetObject("ag_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ag_6 {
+            get {
+                object obj = ResourceManager.GetObject("ag_6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ag_7 {
+            get {
+                object obj = ResourceManager.GetObject("ag_7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ag_8 {
+            get {
+                object obj = ResourceManager.GetObject("ag_8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ag_9 {
+            get {
+                object obj = ResourceManager.GetObject("ag_9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap animated_2 {
+            get {
+                object obj = ResourceManager.GetObject("animated_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background {
             get {
                 object obj = ResourceManager.GetObject("background", resourceCulture);
@@ -126,6 +216,16 @@ namespace Platformer.Properties {
         internal static System.Drawing.Bitmap background_export_72dpi {
             get {
                 object obj = ResourceManager.GetObject("background_export_72dpi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap crystal {
+            get {
+                object obj = ResourceManager.GetObject("crystal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +336,26 @@ namespace Platformer.Properties {
         internal static System.Drawing.Bitmap pfg_3 {
             get {
                 object obj = ResourceManager.GetObject("pfg_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pitfall_1 {
+            get {
+                object obj = ResourceManager.GetObject("pitfall_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pitfall_3 {
+            get {
+                object obj = ResourceManager.GetObject("pitfall_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

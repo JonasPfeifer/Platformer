@@ -18,7 +18,7 @@ namespace Platformer
         
         public override void draw(Graphics g,int playermovementtox)
         {
-            if(0 > groundcount - playermovementtox)
+            if(0 > groundcount - playermovementtox || groundcount - playermovementtox > 5000)
             {
                 groundcount = 1;
             }
@@ -27,8 +27,7 @@ namespace Platformer
                 groundcount -= playermovementtox;
                 
             }
-           //groundcount -= playermovementtox;
-            CroppedImage = background.Clone(new System.Drawing.Rectangle(groundcount, 0,790, 108), background.PixelFormat);
+           CroppedImage = background.Clone(new System.Drawing.Rectangle(groundcount, 0,790, 108), background.PixelFormat);
             g.DrawImage(CroppedImage, 0 , y,790,108);
             
         }

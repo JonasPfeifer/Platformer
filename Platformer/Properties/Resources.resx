@@ -199,4 +199,40 @@
   <data name="_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ag_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ag 10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ag_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ag 11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ag_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ag 12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ag_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ag 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ag_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ag 6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ag_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ag 7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ag_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ag 8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ag_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ag 9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="crystal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crystal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pitfall_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pitfall 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pitfall_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pitfall 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="animated_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\animated_2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
