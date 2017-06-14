@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Platformer
 {
+    //Alle Objekte die im Level sind werden hier erstellt. Die Hindernisse, Mützen, das Ziel und der Boden werden zur einer Liste hinzugefügt die später zur kollisionsabfrage dienst.
     class Level
     {
         List<PhysicalObject> physicalObjectList = new List<PhysicalObject>();
@@ -15,8 +16,11 @@ namespace Platformer
         Player player;
         public Level()
         {
+            //Erstellen des Spieler       
             player = new Player(45, 0,48,64, global::Platformer.Properties.Resources.animated_2);
+            //Erstellen des Bodens
             ground = new Ground(0, 304, global::Platformer.Properties.Resources.ground1);
+            //Hinzugefügen des Bodens zur Liste für die Kollisionsabfrage
             physicalObjectList.Add(ground);
 
             //Goal
@@ -141,9 +145,19 @@ namespace Platformer
             physicalObjectList.Add(new Coin(181,163 , global::Platformer.Properties.Resources._1));
             physicalObjectList.Add(new Coin(142,198 , global::Platformer.Properties.Resources._1));
         }
-        public List<PhysicalObject> getphysicalObjectList() { return physicalObjectList; }
-        public void setphysicalObjectList(List<PhysicalObject> physicalObjectList) { this.physicalObjectList = physicalObjectList; }
-        public Player getplayer() { return player; }
+        public List<PhysicalObject> getphysicalObjectList() {
+            return physicalObjectList;
+        }
+
+        public void setphysicalObjectList(List<PhysicalObject> physicalObjectList)
+        {
+            this.physicalObjectList = physicalObjectList;
+        }
+
+        public Player getplayer() {
+            return player;
+        }
+
         public Ground getGround()
         {
             return ground;

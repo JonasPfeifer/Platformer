@@ -20,8 +20,6 @@ namespace Platformer
             typeOfPhysicalObject = "Player";
             dim = new FrameDimension(background.FrameDimensionsList[0]);
             frameCount = background.GetFrameCount(dim);
-            //w = 48;
-            //h = 64;
         }
 
 
@@ -55,10 +53,6 @@ namespace Platformer
 
         public void draw(Graphics g)
         {
-            System.Drawing.Pen myPen = new System.Drawing.Pen(System.Drawing.Color.Red);
-            g.DrawRectangle(myPen, new Rectangle(x, y, w, h));
-            myPen.Dispose();
-            //g.DrawImage(background, x, y);
             ReverseAtEnd = false;
             g.DrawImage(GetNextFrame(), x, y,w,h);
         }

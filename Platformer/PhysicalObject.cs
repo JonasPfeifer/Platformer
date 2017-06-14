@@ -44,9 +44,6 @@ namespace Platformer
                 x += playermovementtox;
             }
             
-            System.Drawing.Pen myPen = new System.Drawing.Pen(System.Drawing.Color.Red);
-            g.DrawRectangle(myPen, new Rectangle(x, y, w, h));
-            myPen.Dispose();
             g.DrawImage(background, x, y);
         }
         public Bitmap getBackground()

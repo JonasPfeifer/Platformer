@@ -48,7 +48,6 @@ namespace Platformer
             this.screen.Controls.Add(this.score);
             this.screen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.screen.Location = new System.Drawing.Point(0, 0);
-            this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(784, 412);
             this.screen.TabIndex = 0;
             // 
@@ -56,11 +55,9 @@ namespace Platformer
             // 
             this.score.AutoSize = true;
             this.score.Location = new System.Drawing.Point(21, 16);
-            this.score.Name = "score";
             this.score.Size = new System.Drawing.Size(53, 13);
             this.score.TabIndex = 3;
             this.score.Text = "Punkte: 0";
-
             // 
             // timer1
             // 
@@ -91,6 +88,7 @@ namespace Platformer
         private System.Windows.Forms.Panel screen;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label score;
+        //Bitmap auf die später die Levelobjekte gezeichnet werden
         Bitmap stage = new Bitmap(784, 412);
 
     }

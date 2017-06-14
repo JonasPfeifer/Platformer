@@ -10,10 +10,12 @@ using System.Windows.Forms;
 
 namespace Platformer
 {
+    //Klasse mit sämtlichen Kollisionsabfrage, Logik des Spiel
     public partial class Form1 : Form
     {
         Level level;
         Player player;
+        //gforce ist der Wert mit dem der Spieler zum Boden gezogen wird.
         int gforce = 2;
         int ax = 0;
         int ay = 2;
@@ -22,7 +24,6 @@ namespace Platformer
         int backroundcount;
         
         public Form1()
-
         {
             level = new Level();
             player = level.getplayer();
@@ -96,7 +97,7 @@ namespace Platformer
         }
         private bool playerIsEndOfLevel(Player player)
         {
-            return (player.getx() <= 0 || player.gety() <= 0);
+            return (player.getx() <= 0 || player.gety() <= 0) || player.getx() > 7000;
             
         }
         private bool playerIsOutOfLevel(Player player)
@@ -127,11 +128,9 @@ namespace Platformer
         
        void moveLevel()
         {
-            
             using (Graphics g = Graphics.FromImage(stage))
             {
-                //g.DrawImage(global::Platformer.Properties.Resources.background_export_72dpi, 0, 0, 7000, 412);
-                g.DrawImage(moveScrollingTexture(playermovementtox, global::Platformer.Properties.Resources.background_export_72dpi), 0, 0, screen.Width, screen.Height);
+                g.DrawImage(moveScrollingTexture(playermovementtox, global::Platformer.Properties.Resources.bg03_final_), 0, 0, screen.Width, screen.Height);
                 level.getGround().draw(g, playermovementtox);
                 foreach (PhysicalObject obstacle in level.getphysicalObjectList())
                 {
@@ -175,8 +174,6 @@ namespace Platformer
 
             }
             return background.Clone(new System.Drawing.Rectangle(backroundcount, 0, screen.Width, screen.Height), background.PixelFormat);
-            //g.DrawImage(CroppedImage, 0, y, 790, 108);
-
         }
     }
 }
