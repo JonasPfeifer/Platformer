@@ -22,6 +22,9 @@ namespace Platformer
             //Goal
             //physicalObjectList.Add(new Goal(6776, -54, global::Platformer.Properties.Resources.winning_pill));
 
+            //Pitfalls
+            physicalObjectList.Add(new Goal(2818, 243, global::Platformer.Properties.Resources.pitfall_3));
+            physicalObjectList.Add(new Goal(3522, 243, global::Platformer.Properties.Resources.pitfall_1));
 
             //Obstacles
             physicalObjectList.Add(new Obstacles(166, 231,  global::Platformer.Properties.Resources.s_1));
