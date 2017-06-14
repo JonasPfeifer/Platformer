@@ -14,7 +14,7 @@ namespace Platformer
     {
         Level level;
         Player player;
-        int gforce = 2;
+        int gforce = 10;
         int ax = 0;
         int ay = 2;
         int playermovementtox;
